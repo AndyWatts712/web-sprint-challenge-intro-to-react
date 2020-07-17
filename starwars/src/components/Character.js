@@ -1,8 +1,13 @@
 // Write your Character component here
 import React from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
-
+const Card = styled.div`
+    width: 60%;
+    border: 2px solid black;
+    margin: 10px auto;
+    background-color: rgb(192, 154, 115, .5);
+`
 function Character(props) {
     console.log('PROPS', props)
     const { list } = props
@@ -13,13 +18,13 @@ function Character(props) {
         <>
             {list.map(chr => {
                 return (
-                    <div>
+                    <Card>
                         <h2>{chr.name}</h2>
                         <p>Height: {chr.height}</p>
                         <p>Mass: {chr.mass}</p>
                         {/* <p>{chr.}</p> */}
                         {/* <p>{chr.}</p> */}
-                    </div>
+                    </Card>
                 )
             })}
         </>
