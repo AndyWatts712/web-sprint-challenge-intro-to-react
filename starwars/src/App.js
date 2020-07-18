@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Character from './components/Character';
-import Styled from 'styled-components';
 import './App.css';
 
 
@@ -24,8 +23,12 @@ console.log('CHARACTERS', data)
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      {data && <Character list = {data} />}
-    </div>
+      {data && 
+      data.map((chr,i) => {
+        return(
+      <Character chr = {chr} key={i} />
+      )})}
+    </div> 
   );
 }
 

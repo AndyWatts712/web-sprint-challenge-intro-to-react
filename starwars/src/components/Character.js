@@ -10,24 +10,18 @@ const Card = styled.div`
 `
 function Character(props) {
     console.log('PROPS', props)
-    const { list } = props
+    const { chr } = props
     // console.log(list)
 
     // console.log(chr)
     return (
-        <>
-            {list.map(chr => {
-                return (
-                    <Card>
-                        <h2>{chr.name}</h2>
-                        <p>Height: {chr.height}</p>
-                        <p>Mass: {chr.mass}</p>
-                        {/* <p>{chr.}</p> */}
-                        {/* <p>{chr.}</p> */}
-                    </Card>
-                )
-            })}
-        </>
+        <Card>
+            <h2>{chr.name}</h2>
+            <p>Height: {chr.height}</p>
+            <p>Mass: {chr.mass}</p>
+            {/* <p>{i}</p> */}
+            {/* <p>{chr.}</p> */}
+        </Card>
     )
 }
 
